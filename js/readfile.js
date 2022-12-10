@@ -2,7 +2,7 @@ const fs = require("fs");
 
 let p = new Promise((resolve, reject) => {
     setTimeout(() => {
-        fs.readFile("text.txt", "utf-8", (err, data) => {
+        fs.readFile("test.txt", "utf-8", (err, data) => {
             if (err) {
                 reject(err);
             } else {
