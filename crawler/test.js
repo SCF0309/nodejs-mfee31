@@ -7,13 +7,13 @@ const mysql2 = require('mysql2/promise');
     host: '127.0.0.1',
     port: 3306,
     user: 'admin',
-    password: '12345',
+    password: '',
     database: 'stock_mfee31',
   });
 
   // simple query
-  let result = await connection.query('SELECT * FROM `stocks`');
-  let data = result[0];
+  let [data, no] = await connection.query('SELECT * FROM `stocks`');
+//   let data = result[0];
   // console.log(result);
   console.log(data);
 
